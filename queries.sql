@@ -9,7 +9,8 @@ select city from STATION where CITY regexp '^[aeiouAEIOU]';-- select city from S
 select distinct CITY from STATION where CITY regexp '[aeiouAEIOU]$'; -- select distinct CITY from STATION where CITY regexp '[aeiouAEIOU]$'; --
 select distinct CITY from STATION where CITY regexp '^[aeiouAEIOU].*[aeiouAEIOU]$';
 select distinct CITY from STATION where CITY regexp '^[^aeiouAEIOU]';
-
+SELECT distinct CITY from STATION where CITY regexp '^[^aeiouAEIOU]' or
+CITY regexp '[^aeiuoAEIOU]$';
 
 
 
