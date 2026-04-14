@@ -15,7 +15,7 @@ SELECT distinct CITY from STATION where CITY regexp '^[^aeiouAEIOU]' and
 CITY regexp '[^aeiuoAEIOU]$';
 select NAME from STUDENTS where MARKS>75 order by substring(NAME,length(NAME)-2,3)
 ,ID ASC;
-
+select name from Employee order by name;
 
 
 
