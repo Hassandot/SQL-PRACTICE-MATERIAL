@@ -22,7 +22,7 @@ SELECT sum(POPULATION) from CITY where DISTRICT='California';
 SELECT avg(population) from city where district='California';
 select round(avg(population)) from city;
 SELECT sum(population) from city where countrycode='JPN';
-
+select max(population)-min(population) from city;
 
 
 
