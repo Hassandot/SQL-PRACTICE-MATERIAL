@@ -17,5 +17,5 @@ select NAME from STUDENTS where MARKS>75 order by substring(NAME,length(NAME)-2,
 ,ID ASC;
 select name from Employee order by name;
 select name from Employee where salary>2000 and months<10 order by employee_id;
-
+SELECT count(Name) from CITY where POPULATION>100000 ;
 
