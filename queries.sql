@@ -20,3 +20,12 @@ select name from Employee where salary>2000 and months<10 order by employee_id;
 SELECT count(Name) from CITY where POPULATION>100000 ;
 SELECT sum(POPULATION) from CITY where DISTRICT='California';
 SELECT avg(population) from city where district='California';
+select round(avg(population)) from city;
+
+
+
+
+
+
+
+
