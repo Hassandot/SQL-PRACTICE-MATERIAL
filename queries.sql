@@ -27,5 +27,5 @@ select ceil(avg(salary)-avg(cast(replace(salary,'0','')as unsigned))) from emplo
 select (select max(months*salary) from employee),count(*) from employee where months*salary=(select max(months*salary) from employee);
 select round(sum(lat_n),2) , round(sum(long_w),2) from station;
 select round(sum(lat_n),4) from station where lat_n>38.7880 and lat_n<137.2345; 
-
+select round(max(lat_n),4) from station where lat_n<137.2345;
 
