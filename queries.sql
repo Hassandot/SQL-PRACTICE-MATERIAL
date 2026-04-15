@@ -31,7 +31,14 @@ select round(max(lat_n),4) from station where lat_n<137.2345;
 SELECT round(long_w,4) from station where lat_n=(select max(lat_n) from station where lat_n<137.2345); 
 select round(lat_n,4) from station where lat_n=(select min(lat_n) from station where lat_n>38.7780);
 select round(long_w,4) from station where lat_n=(select min(lat_n) from station where lat_n>38.7780);
-
+select 
+case 
+when a+b<=c or a+c<=b or b+c<=a then 'Not A Triangle'
+when a=b and b=c then 'Equilateral'
+when a=b or b=c or a=c then 'Isosceles'
+else 'Scalene'
+end
+from triangles;
 
 
 
