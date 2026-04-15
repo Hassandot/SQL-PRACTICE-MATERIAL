@@ -25,7 +25,7 @@ SELECT sum(population) from city where countrycode='JPN';
 select max(population)-min(population) from city;
 select ceil(avg(salary)-avg(cast(replace(salary,'0','')as unsigned))) from employees;
 select (select max(months*salary) from employee),count(*) from employee where months*salary=(select max(months*salary) from employee);
-
+select round(sum(lat_n),2) , round(sum(long_w),2) from station;
 
 
 
