@@ -48,7 +48,7 @@ SELECT cc.continent,floor(avg(c.population)) from city c join country cc on c.co
 select product_id from products where low_fats='Y' and recyclable='Y';
 select teacher_id,count(distinct subject_id) as cnt from teacher group by teacher_id;
 select date_id,make_name ,count(distinct lead_id) as unique_leads,count(distinct partner_id) as unique_partners from dailysales group by date_id,make_name;
-
+select event_day as day , emp_id ,(select sum(out_time-in_time) from employees where emp_id=e.emp_id and event_day=e.event_day) as total_time from employees e group by emp_id,event_day;
 
 
 
