@@ -47,3 +47,11 @@ SELECT c.name from city c join country cc on c.countrycode=cc.code WHERE cc.cont
 SELECT cc.continent,floor(avg(c.population)) from city c join country cc on c.countrycode=cc.code group by cc.continent;
 select product_id from products where low_fats='Y' and recyclable='Y';
 select teacher_id,count(distinct subject_id) as cnt from teacher group by teacher_id;
+select date_id,make_name ,count(distinct lead_id) as unique_leads,count(distinct partner_id) as unique_partners from dailysales group by date_id,make_name;
+
+
+
+
+
+
+
