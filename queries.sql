@@ -45,5 +45,5 @@ order by count(occupation),occupation;
 SELECT sum(c.population) from city c join country cc on c.countrycode=cc.code where cc.continent='Asia';
 SELECT c.name from city c join country cc on c.countrycode=cc.code WHERE cc.continent='Africa';
 SELECT cc.continent,floor(avg(c.population)) from city c join country cc on c.countrycode=cc.code group by cc.continent;
-
+select product_id from products where low_fats='Y' and recyclable='Y';
 
