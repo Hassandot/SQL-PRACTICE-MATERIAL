@@ -50,7 +50,11 @@ select teacher_id,count(distinct subject_id) as cnt from teacher group by teache
 select date_id,make_name ,count(distinct lead_id) as unique_leads,count(distinct partner_id) as unique_partners from dailysales group by date_id,make_name;
 select event_day as day , emp_id ,(select sum(out_time-in_time) from employees where emp_id=e.emp_id and event_day=e.event_day) as total_time from employees e group by emp_id,event_day;
 select p.product_name,s.year,s.price from sales s join product p on p.product_id=s.product_id;
-
+select product_id,'store1' as store,store1 as price  from products where store1 is not  null
+union all
+select product_id,'store2',store2 from products where store2 is not  null
+union all
+select product_id,'store3',store3 from products where store3 is not  null;
 
 
 
