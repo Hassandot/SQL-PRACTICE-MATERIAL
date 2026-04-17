@@ -61,7 +61,7 @@ set sex = case
 when sex='f' then 'm'
 when sex='m' then 'f'
 end;
-
+select eu.unique_id as unique_id,e.name from employees e left join employeeuni eu on e.id=eu.id;
 
 
 
