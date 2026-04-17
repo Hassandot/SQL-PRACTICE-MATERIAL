@@ -63,7 +63,7 @@ when sex='m' then 'f'
 end;
 select eu.unique_id as unique_id,e.name from employees e left join employeeuni eu on e.id=eu.id;
 select u.name ,sum(t.amount) as balance from users u join transactions t on u.account=t.account group by t.account having sum(t.amount)>10000;
-
+select p.firstname,p.lastname ,a.city , a.state from person p left join address a on p.personid=a.personid ;
 
 
 
