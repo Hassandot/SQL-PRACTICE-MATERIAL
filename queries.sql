@@ -55,7 +55,7 @@ union all
 select product_id,'store2',store2 from products where store2 is not  null
 union all
 select product_id,'store3',store3 from products where store3 is not  null;
-
+select tweet_id from tweets where char_length(content)>15;
 
 
 
