@@ -65,7 +65,10 @@ select eu.unique_id as unique_id,e.name from employees e left join employeeuni e
 select u.name ,sum(t.amount) as balance from users u join transactions t on u.account=t.account group by t.account having sum(t.amount)>10000;
 select p.firstname,p.lastname ,a.city , a.state from person p left join address a on p.personid=a.personid ;
 select e.name , b.bonus from employee e left join bonus b on e.empid=b.empid where b.bonus<1000 or b.bonus is NULL;
-
+select sell_date,count(distinct product) as num_sold , 
+group_concat(distinct product order by product) as products 
+from activities
+group by sell_date;
 
 
 
