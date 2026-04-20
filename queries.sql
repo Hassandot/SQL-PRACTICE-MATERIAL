@@ -70,6 +70,6 @@ group_concat(distinct product order by product) as products
 from activities
 group by sell_date;
 select user_id,max(time_stamp) as last_stamp from logins where year(time_stamp)=2020 group by user_id;
-
+select s.name from student s join course c on s.stu_id=c.std_id where c.course='Physics' and s.name is not like 'A%';
 
 
